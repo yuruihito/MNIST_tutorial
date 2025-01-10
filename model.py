@@ -1,4 +1,4 @@
-import torch            # 深層学習のモジュール（PyTorch）
+import torch           
 import torch.nn as nn
 
 class CNN(nn.Module):
@@ -12,11 +12,11 @@ class CNN(nn.Module):
         self.act = nn.ReLU()
         self.pool = nn.MaxPool2d(2, 2)
 
-    def forward(self, x):                       # 入力画像サイズ: [batch, 1, 28, 28]
-        h = self.pool(self.act(self.conv1(x)))  # 出力される特徴マップサイズ: [batch, 16, 14, 14]
-        h = self.pool(self.act(self.conv2(h)))  # 出力される特徴マップサイズ: [batch, 32, 7, 7]
-        # 特徴マップの配列サイズを [batch, channel, height, width] --> [batch, channel * height * width] に変更
-        h = h.view(h.size()[0], -1)
+    def forward(self, x):                       # [batch, 1, 28, 28]
+        h = self.pool(self.act(self.conv1(x)))  # [batch, 16, 14, 14]
+        h = self.pool(self.act(self.conv2(h)))  # [batch, 32, 7, 7]
+        
+        h = h.view(h.size()[0], -1)# [batch, channel, height, width] --> [batch, channel * height * width] 
         h = self.act(self.l1(h))
         h = self.act(self.l2(h))
         h = self.l3(h)
