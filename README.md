@@ -1,6 +1,5 @@
 # 使い方
 ## ファイル構造
-*のところが変更やCNNの学習に使える。
 ```
 └──mnist_classification
     ├──MNIST：文字データ
@@ -17,30 +16,36 @@
 ```
 
 ## 環境構築
-必要なモジュールのインストール
+必要なモジュールのインストールをしてください。
 ```
-!pip install -r requirements.txt
+pip install -r requirements.txt
 ```
-pythonは3.12.3を使用しました。
+poetryを使用している場合
+```
+poetry install
+```
 
 ## config 引数設定
-適宜変更してください。変更しなくても実行可能
+適宜変更してください。
 ```
     "gpu_id": 0, #GPU使用
     "batch_size": 100,  #バッチサイズ
     "epoch_num" : 50, #学習数
     "save_every_epoch_num": 10, #保存頻度
-    "model_state": "checkpoint" #test時の使用モデルパラメータ名
+    "model_state": "checkpoint" 
 ```
 
 ## 学習
 train.ipynbを実行
 epoch毎のロスと精度の推移は
 ```
+
 /workspace/training_log
 ```
 に書き出し
 
+以下の学習logが書き出される
+![loss_and_accuray](https://github.com/user-attachments/assets/051fd663-f039-4b86-9ab5-0ebb16ac3883)
 ## テスト
 eval.ipynbを実行
 結果の可視化は
@@ -48,3 +53,8 @@ eval.ipynbを実行
 /workspace/eval
 ```
 に書き出し
+
+以下のような混同行列が書き出される
+![mnist_confusion_matrix](https://github.com/user-attachments/assets/fe0b14f0-c870-4ed3-b4e0-9d8bc822fe4d)
+
+
