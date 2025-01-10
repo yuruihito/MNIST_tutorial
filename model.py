@@ -14,8 +14,7 @@ class CNN(nn.Module):
 
     def forward(self, x):                       # [batch, 1, 28, 28]
         h = self.pool(self.act(self.conv1(x)))  # [batch, 16, 14, 14]
-        h = self.pool(self.act(self.conv2(h)))  # [batch, 32, 7, 7]
-        
+        h = self.pool(self.act(self.conv2(h)))  # [batch, 32, 7, 7]        
         h = h.view(h.size()[0], -1)# [batch, channel, height, width] --> [batch, channel * height * width] 
         h = self.act(self.l1(h))
         h = self.act(self.l2(h))
