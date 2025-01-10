@@ -22,10 +22,9 @@ def logger(epochs, train_losses, train_accuracies):
 
 
 def mk_confusion_matrix(class_names, all_labels, all_preds):
-    # 混同行列を計算
+
     cm = confusion_matrix(all_labels, all_preds)
 
-    # 混同行列の可視化
     plt.figure(figsize=(8, 6))
     sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=class_names, yticklabels=class_names)
     plt.xlabel('Predicted')
