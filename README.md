@@ -16,28 +16,28 @@
     └──*train.ipynb: 学習用コード
 ```
 
-##　環境構築
+## 環境構築
 必要なモジュールのインストール
 ```
 !pip install -r requirements.txt
 ```
 pythonは3.12.3を使用しました。
 
-## config　引数設定
+## config 引数設定
 適宜変更してください。変更しなくても実行可能
 ```
     "gpu_id": 0, #GPU使用
     "batch_size": 100,  #バッチサイズ
-    "epoch_num" : 50,　#学習数
-    "save_every_epoch_num": 10,　#保存頻度
-    "model_state": "checkpoint"　#test時の使用モデルパラメータ名
+    "epoch_num" : 50, #学習数
+    "save_every_epoch_num": 10, #保存頻度
+    "model_state": "checkpoint" #test時の使用モデルパラメータ名
 ```
 
 ## 学習
 train.ipynbを実行
 epoch毎のロスと精度の推移は
 ```
-/workspace/training_log　
+/workspace/training_log
 ```
 に書き出し
 
