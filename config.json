@@ -1,0 +1,9 @@
+{
+
+    "gpu_id": 0,
+    "batch_size": 100,
+    "epoch_num" : 50,
+    "save_every_epoch_num": 10,
+    "model_state": "checkpoint"
+    
+}
