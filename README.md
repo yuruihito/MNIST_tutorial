@@ -8,7 +8,8 @@
     │   ├──checkpoint　モデルパラメータ
     │   ├──eval 混同行列
     │   └──training_log: ロスと精度の推移
-    ├──requierement.txt: 実行環境　余計なものがかなり含まれています. python == 3.12.3
+    ├──requierement.txt: 実行環境
+    ├──pyproject.toml: 実行環境
     ├──*config.json: 引数
     ├──*eval.ipynb: テスト用コード
     ├──*model.py: CNN
