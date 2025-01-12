@@ -1,4 +1,4 @@
-# 使い方
+# Usage
 ## ファイル構造
 ```
 └──mnist_classification
@@ -27,7 +27,7 @@ poetry install
 ```
 
 ## config 引数設定
-適宜変更してください。
+以下はデフォルト値です。適宜変更してください。
 ```
     "gpu_id": 0, #GPU使用
     "batch_size": 100,  #バッチサイズ
