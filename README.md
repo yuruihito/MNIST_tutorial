@@ -10,10 +10,10 @@
     │   └──training_log: ロスと精度の推移
     ├──requierement.txt: 実行環境
     ├──pyproject.toml: 実行環境
-    ├──*config.json: 引数
-    ├──*eval.ipynb: テスト用コード
-    ├──*model.py: CNN
-    └──*train.ipynb: 学習用コード
+    ├──config.json: 引数
+    ├──eval.ipynb: テスト用コード
+    ├──model.py: CNN
+    └──train.ipynb: 学習用コード
 ```
 
 ## 環境構築
